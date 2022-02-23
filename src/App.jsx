@@ -25,7 +25,7 @@ function App() {
       }
     }
     fetchUserData()
-  }, [inputValue])
+  }, [])
 
 
   const searchUser = async (e) => {
