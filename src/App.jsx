@@ -12,17 +12,21 @@ function App() {
   const [inputValue, setInputValue] = useState('reydelshit')
 
 
-  useEffect( async () => {
+  useEffect(() => {
 
     //default
-    try{
-      const getData = await fetch(`https://api.github.com/users/${inputValue}`)
-      const gotData = await getData.json()
-      setUserData([gotData])
+
+    const fetchUserData = async () => {
+      try{
+        const getData = await fetch(`https://api.github.com/users/${inputValue}`)
+        const gotData = await getData.json()
+        setUserData([gotData])
+      }
+      catch {
+        setError('error')
+      }
     }
-    catch {
-      setError('error')
-    }
+    fetchUserData()
 
   }, [])
 
