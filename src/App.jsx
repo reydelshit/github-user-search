@@ -67,7 +67,7 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className="flex items-center flex-col w-screen h-screen p-3 lg:p-10 dark:bg-cyan-50 bg-mainBG transition-all ease-out duration-500">
+      <div className="flex items-center justify-center flex-col w-screen h-screen p-3 lg:p-10 dark:bg-cyan-50 bg-mainBG transition-all ease-out duration-500">
         <Header setDarkMode={setDarkMode} darkMode={darkMode}/>
           <SearchUser searchUser={searchUser} userInput={userInput}/>
         <div className="border-2 h-auto lg:h-4/6 w-full md:w-4/5 lg:w-2/5 dark:bg-white border-cyan-300 p-3 lg:p-5 rounded-2xl dark:border-secondaryColor">
