@@ -18,6 +18,8 @@ function App() {
 
   const [loading, setLoading] = useState(false)
 
+  const [userNotFound, setUserNotFound] = useState('')
+
 
   useEffect(() => {
     //default
@@ -53,6 +55,10 @@ function App() {
       console.log(gotData)
       setLoading(false)
 
+      if(gotData.message === 'Not Found'){
+        setUserNotFound('user not found')
+      }
+
     }
     catch {
       setError('error')
@@ -72,7 +78,11 @@ function App() {
           <SearchUser searchUser={searchUser} userInput={userInput}/>
         <div className="flex items-center justify-center border-2 h-2/3 md:h-4/6 lg:h-h-2/4 w-full md:w-4/5 lg:w-2/5 dark:bg-white border-cyan-300 p-3 lg:p-5 rounded-2xl dark:border-secondaryColor">
           {error}
-          {loading ? <Loader /> : <User userData={userData} />}
+
+          {userNotFound ? <h1 className="text-cyan-300">user not found bruh</h1> : 
+          <>
+            {loading  ? <Loader /> : <User userData={userData} />}
+          </>}
         </div>
       </div>
     </div>
