@@ -19,7 +19,7 @@ const User = ({userData}) => {
           <div className='flex w-full items-center justify-around mb-5'>
               <img className='w-3/12 md:w-28 h-1/4 md:h-28 object-fill rounded-full mr-3 md:mx-2' src={wow.avatar_url} alt="profile" />
           <div className='flex flex-col md:flex-row w-full items-start p-1 md:p-5'>
-            <div className='flex flex-col items-start w-full'>
+            <div className='flex flex-col items-start w-full mb-1'>
               <h2 className='text-cyan-300 font-bold text-xl md:text-2xl dark:text-secondaryColor'>{wow.name}</h2>
               <span className='text-cyan-400 dark:text-secondaryColor'>@{wow.login}</span>
             </div>
