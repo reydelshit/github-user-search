@@ -9,31 +9,31 @@ function App() {
 
   const [userData, setUserData] = useState([])
   const [error, setError] = useState('')
-  const [inputValue, setInputValue] = useState('reydelshit')
+  const [inputValue, setInputValue] = useState('username')
 
 
   useEffect(() => {
     //default
+    const fetchUserData = async () => {
+      try{
+        const getData = await fetch(`https://api.github.com/users/reydelshit`)
+        const gotData = await getData.json()
+        setUserData([gotData])
+      }
+      catch {
+        setError('error')
+      }
+    }
     fetchUserData()
-  }, [])
+  }, [inputValue])
 
-  const fetchUserData = async () => {
-    try{
-      const getData = await fetch(`https://api.github.com/users/${inputValue}`)
-      const gotData = await getData.json()
-      setUserData([gotData])
-    }
-    catch {
-      setError('error')
-    }
-  }
 
   const searchUser = async (e) => {
     e.preventDefault()
 
-    if(!inputValue && inputValue === ''){
-      return inputValue
-    }
+    // if(!inputValue && inputValue === ''){
+    //   return inputValue
+    // }
 
     try{
       const getData = await fetch(`https://api.github.com/users/${inputValue}`)
