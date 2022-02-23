@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
 
     //default
-
     const fetchUserData = async () => {
       try{
         const getData = await fetch(`https://api.github.com/users/${inputValue}`)

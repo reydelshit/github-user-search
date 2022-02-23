@@ -48,7 +48,7 @@ const User = ({userData}) => {
             </div>
             <div className=''>
               <i className="fa-solid fa-pencil mr-3 text-cyan-400 text-xl"></i>
-              <span>{wow.blog ? <a href={wow.blog} target="_blank">{wow.blog}</a> : 'not available'}</span>
+              <span>{wow.blog ? <a href={wow.blog} target="_blank" rel="noreferrer">{wow.blog}</a> : 'not available'}</span>
             </div>
             <div>
               <i className="fa-brands fa-twitter mr-3 text-cyan-400 text-xl"></i>
