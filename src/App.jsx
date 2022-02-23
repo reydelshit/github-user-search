@@ -14,19 +14,19 @@ function App() {
 
   useEffect(() => {
     //default
-    const fetchUserData = async () => {
-      try{
-        const getData = await fetch(`https://api.github.com/users/reydelshit`)
-        const gotData = await getData.json()
-        setUserData([gotData])
-      }
-      catch {
-        setError('error')
-      }
-    }
     fetchUserData()
   }, [])
 
+  const fetchUserData = async () => {
+    try{
+      const getData = await fetch(`https://api.github.com/users/reydelshit`)
+      const gotData = await getData.json()
+      setUserData([gotData])
+    }
+    catch {
+      setError('error')
+    }
+  }
 
   const searchUser = async (e) => {
     e.preventDefault()
