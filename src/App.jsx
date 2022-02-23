@@ -53,9 +53,9 @@ function App() {
   }
 
   return (
-    <div className="flex items-center flex-col w-screen h-screen p-5 lg:p-10">
+    <div className="flex items-center flex-col w-screen h-screen p-3  lg:p-10">
         <SearchUser searchUser={searchUser} userInput={userInput}/>
-      <div className="border-2 h-auto lg:h-4/6 w-full md:w-4/5 lg:w-2/5 border-gray-700 p-5 rounded-2xl">
+      <div className="border-2 h-auto lg:h-4/6 w-full md:w-4/5 lg:w-2/5 border-gray-700 p-3 lg:p-5 rounded-2xl">
         {error}
         <User userData={userData} />
       </div>
