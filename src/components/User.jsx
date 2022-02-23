@@ -18,43 +18,43 @@ const User = ({userData}) => {
         <div key={index}>
           <div className='flex w-full items-center justify-around mb-5'>
               <img className='w-3/12 md:w-28 h-1/4 md:h-28 object-fill rounded-full mr-3 md:mx-2' src={wow.avatar_url} alt="profile" />
-          <div className='flex flex-col md:flex-row w-full items-start p-2 md:p-5 '>
+          <div className='flex flex-col md:flex-row w-full items-start p-3 md:p-5'>
             <div className='flex flex-col items-start w-9/12'>
-              <h2 className='text-cyan-600 font-bold text-xl md:text-2xl'>{wow.name}</h2>
-              <span className='text-cyan-300'>{wow.login}</span>
+              <h2 className='text-cyan-300 font-bold text-xl md:text-2xl dark:text-secondaryColor'>{wow.name}</h2>
+              <span className='text-cyan-400 dark:text-secondaryColor'>@{wow.login}</span>
             </div>
-            <span className='w-40 text-cyan-600 text-xs text-left'>{formatDate}</span>
+            <span className='text-cyan-400 w-36 text-xs text-left md:text-right dark:text-secondaryColor'>{formatDate}</span>
           </div>
           </div>
           <div className='w-full h-28p-1 mb-5'>
-            <span className='inline-block'>{wow.bio ? <p className='inline-block text-sm break-all text-cyan-600'>{wow.bio}</p> : "there's no existing bio bruh"}</span>
+            <span className='inline-block text-cyan-300 dark:text-secondaryColor'>{wow.bio ? <p className='inline-block text-sm break-all '>{wow.bio}</p> : "there's no existing bio bruh"}</span>
           </div>
-          <div className='flex flex-col md:flex-row w-full justify-between bg-cyan-400 p-1 md:p-4 rounded-xl'>
+          <div className='flex flex-col md:flex-row w-full justify-between bg-gray-600 border-2 border-cyan-300 p-1 md:p-4 rounded-xl dark:bg-gray-100 dark:border-secondaryColor'>
             <div>
-              <span className='block text-sm'>Followers</span>
-              <span className='font-bold text-cyan-900'>{wow.followers}</span>
+              <span className='block text-sm text-cyan-300 dark:text-secondaryColor'>Followers</span>
+              <span className='font-bold text-white dark:text-black'>{wow.followers}</span>
             </div>
             <div>
-              <span className='block text-sm'>Following</span>
-              <span className='font-bold text-cyan-900'>{wow.following}</span>
+              <span className='block text-sm text-cyan-300 dark:text-secondaryColor'>Following</span>
+              <span className='font-bold text-white dark:text-black'>{wow.following}</span>
             </div>
             <div>
-              <span className='block text-sm'>Public Repo</span>
-              <span className='font-bold text-cyan-900'>{wow.public_repos}</span>
+              <span className='block text-sm text-cyan-300 dark:text-secondaryColor'>Public Repo</span>
+              <span className='font-bold text-white dark:text-black'>{wow.public_repos}</span>
             </div>
           </div>
           <div className='flex items-start flex-col p-1 mt-5 text-left w-full'>
             <div>
-              <i className="fa-solid fa-location-dot mr-3 text-cyan-400 text-xl"></i>
-              <span className='text-sm'>{wow.location ? <span>{wow.location}</span> : 'not available'}</span>
+              <i className="fa-solid fa-location-dot mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
+              <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.location ? <span>{wow.location}</span> : 'not available'}</span>
             </div>
             <div className=''>
-              <i className="fa-solid fa-pencil mr-3 text-cyan-400 text-xl"></i>
-              <span className='text-sm'>{wow.blog ? <a href={wow.blog} target="_blank" rel="noreferrer">{wow.blog}</a> : 'not available'}</span>
+              <i className="fa-solid fa-pencil mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
+              <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.blog ? <a href={wow.blog} target="_blank" rel="noreferrer">{wow.blog}</a> : 'not available'}</span>
             </div>
             <div>
-              <i className="fa-brands fa-twitter mr-3 text-cyan-400 text-xl"></i>
-              <span className='text-sm'>{wow.twitter_username ? <span>{wow.twitter_username}</span> : 'not available'}</span>
+              <i className="fa-brands fa-twitter mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
+              <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.twitter_username ? <span>{wow.twitter_username}</span> : 'not available'}</span>
             </div>
           </div>
         </div>)}
