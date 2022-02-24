@@ -15,7 +15,7 @@ const User = ({userData}) => {
   return (
     <>
       {userData.map((wow, index) => 
-        <div key={index}>
+        <div className='w-full' key={index}>
           <div className='flex w-full items-center justify-around mb-5'>
               <img className='w-3/12 h-1/4 md:w-28 md:h-28 object-fill rounded-full mr-3 md:mx-2' src={wow.avatar_url} alt="profile" />
           <div className='flex flex-col md:flex-row w-full items-start p-1 md:p-5'>
@@ -23,7 +23,7 @@ const User = ({userData}) => {
               <h2 className='text-cyan-300 font-bold text-xl md:text-2xl dark:text-secondaryColor'>{wow.name}</h2>
               <span className='text-cyan-400 dark:text-secondaryColor'>@{wow.login}</span>
             </div>
-            <span className='text-cyan-400 w-36 text-xs text-left md:text-right dark:text-secondaryColor'>{formatDate}</span>
+            <span className='lg:absolute top-5 right-5 text-cyan-400 w-36 text-xs text-left md:text-right dark:text-secondaryColor'>{formatDate}</span>
           </div>
           </div>
           <div className='w-full h-28p-1 mb-5'>
