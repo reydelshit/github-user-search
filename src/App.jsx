@@ -34,6 +34,9 @@ function App() {
       const gotData = await getData.json()
       setUserData([gotData])
       setLoading(false)
+
+      console.log(gotData)
+
     }
     catch(err) {
       setError('error')

@@ -48,13 +48,17 @@ const User = ({userData}) => {
               <i className="fa-solid fa-location-dot mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
               <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.location ? <span>{wow.location}</span> : 'not available'}</span>
             </div>
-            <div className=''>
+            <div>
               <i className="fa-solid fa-pencil mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
               <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.blog ? <a href={wow.blog} target="_blank" rel="noreferrer">{wow.blog}</a> : 'not available'}</span>
             </div>
             <div>
               <i className="fa-brands fa-twitter mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
               <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.twitter_username ? <span>{wow.twitter_username}</span> : 'not available'}</span>
+            </div>
+            <div>
+              <i className="fa-solid fa-building mr-3 text-cyan-400 text-xl dark:text-secondaryColor"></i>
+              <span className='text-sm text-cyan-300 dark:text-secondaryColor'>{wow.company ? <span>{wow.company}</span> : 'not available'}</span>
             </div>
           </div>
         </div>)}
