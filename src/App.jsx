@@ -35,7 +35,7 @@ function App() {
       setUserData([gotData])
       setLoading(false)
 
-      console.log(gotData)
+      // console.log(gotData)
 
     }
     catch(err) {
